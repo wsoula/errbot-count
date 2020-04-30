@@ -18,6 +18,6 @@ class Count(BotPlugin):
 
     def backend(self,type,key):
         url='https://api.countapi.xyz/'+type+'/wsoula/'+key
-        page = urllib.request.Request(url)
+        page = urllib.request.Request(url,headers={'User-Agent': 'Mozilla/5.0'})
         response = json.loads(urllib.request.urlopen(page).read().decode('utf-8'))
         return response['value']
