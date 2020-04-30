@@ -9,12 +9,12 @@ class Count(BotPlugin):
     @arg_botcmd('key',type=str)
     def count_hit(self,msg,key=None):
         count=self.backend('hit',key)
-        return key+' has now been accessed '+count+' times.'
+        return key+' has now been accessed '+str(count)+' times.'
 
     @arg_botcmd('key',type=str)
     def count_get(self,msg,key=None):
         count=self.backend('get',key)
-        return key+' has been accessed '+count+' times.'
+        return key+' has been accessed '+str(count)+' times.'
 
     def backend(self,type,key):
         url='https://api.countapi.xyz/'+type+'/wsoula/'+key
