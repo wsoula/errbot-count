@@ -1,0 +1,9 @@
+[Core]
+Name = Count
+Module = count
+
+[Documentation]
+Description = Count things with http://countapi.xyz
+
+[Python]
+Version = 3
